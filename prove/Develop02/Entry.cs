@@ -11,6 +11,14 @@ public class Entry
     public string _response;
     public string _date;
     
+    public Entry()
+    {
+        initaliizePrompt();
+
+        DateTime theCurrentTime = DateTime.Now;
+        string dateToday = theCurrentTime.ToShortDateString();
+        _date = dateToday;
+    }
     public Entry(string response)
     {
         initaliizePrompt();

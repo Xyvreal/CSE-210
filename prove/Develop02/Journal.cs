@@ -14,9 +14,15 @@ Function to save all entries to a file
         Entries = new List<Entry>();
     }
 
-    public void NewEntry (string response, string date = null, string prompt = null)
+    public void NewEntry (string response = null, string date = null, string prompt = null)
     {
-        if (date != null && prompt == null)
+        if (response == null)
+        {
+            Entry newEntry = new Entry();
+            response = newEntry.GetResponse();
+            newEntry._response = response;
+        }
+        else if (date != null && prompt == null)
         {
             Entry newEntry = new Entry(response, date);
             Entries.Add(newEntry);
@@ -59,7 +65,7 @@ Function to save all entries to a file
         }
     }
 
-    public void DisplayJournal (string filename)
+    public void DisplayJournal ()
     {
         foreach(Entry i in Entries)
         {

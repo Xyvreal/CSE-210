@@ -33,11 +33,13 @@ class Program
             }
             else if (option == 3)
             {
+                Console.WriteLine("Please input the filename you would like to load from (inclucing .txt)");
                 string filenames = Console.ReadLine();
                 Journal1.ReadJounal(filenames);
             }
             else if (option == 4)
             {
+                Console.WriteLine("Please input the filename you would like to save to (inclucing .txt) ");
                 string filenames = Console.ReadLine();
                 Journal1.SaveJournal(filenames);
             }

@@ -19,8 +19,10 @@ Function to save all entries to a file
         if (response == null)
         {
             Entry newEntry = new Entry();
+            Console.WriteLine(newEntry._prompt);
             response = newEntry.GetResponse();
             newEntry._response = response;
+            Entries.Add(newEntry);
         }
         else if (date != null && prompt == null)
         {

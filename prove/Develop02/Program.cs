@@ -2,8 +2,10 @@ using System;
 
 class Program
 {
-    static int IsNumber(string waffles){
-        if (!int.TryParse(waffles, out int n)){
+    static int IsNumber(string waffles)
+    {
+        if (!int.TryParse(waffles, out int n))
+        {
             Console.WriteLine($"{waffles} is not a number. Please input a number.");
         }
         else{}
@@ -12,17 +14,9 @@ class Program
     static void Main(string[] args)
     {
         bool loop = true;
-        bool user = false; 
-        while (loop){
+        while (loop)
+        {
             Console.WriteLine("Please select one of the following choices:\n1. Write\n2. Display\n3. Load\n4. Save\n5. Quit");
-
-            while (!user){
-                string input = Console.ReadLine();
-                if (!int.TryParse(input, out int choice)){
-
-                }
-                
-            }
             
 
         }

@@ -2,14 +2,7 @@ using System;
 
 class Program
 {
-    static int IsNumber(string waffles)
-    {
-        if (!int.TryParse(waffles, out int n)){
-            Console.WriteLine($"{waffles} is not a number. Please input a number.");
-        }
-        else{}
-        return n;
-    }
+
     static void Main(string[] args)
     {
         Journal Journal1 = new Journal();
